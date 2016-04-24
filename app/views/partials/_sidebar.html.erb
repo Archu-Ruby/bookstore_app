@@ -1,0 +1,26 @@
+
+
+
+<% if params[:controller] == 'about'  %>
+
+ <div class="well">
+     
+ <h>Location information</h>
+<ul><li>Located in: New Jersey Institute of Technology</li>
+<li>Address: 150 Bleeker St, Newark, NJ 07103</li>
+<li>Phone:(973) 596-3200</li>
+<li>Website www.libnj.com</li></ul></div>
+<%end%>
+
+<% if params[:controller] == 'books' && params[:action] == 'index' || params[:action] == 'show' %>
+
+
+<div class="list-group">
+ 
+  <a href="#" class="list-group-item">PHP</a>
+  <a href="#" class="list-group-item">ROR</a>
+  <a href="#" class="list-group-item">PYTHON</a>
+  <a href="#" class="list-group-item">JAVA</a>
+</div>
+
+<% end %>
