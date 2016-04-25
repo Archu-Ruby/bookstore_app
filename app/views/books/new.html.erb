@@ -10,13 +10,19 @@
 	<div class="form-group">
 		<%= f.label :isbn %><br />
 		<%= f.text_field :isbn ,class:'form-control' %><br />
+</div>
+
+    <div class="form-group">
+		<%= f.label :coverpath %><br />
+		<%= f.text_field :coverpath ,class:'form-control' %><br />
 	</div>
+
+
 
 	<div class="form-group">
 		<%= f.label :category %><br />
-		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %><br /
-                                                                                                                                      
-                                                                                                                                      ><br />
+		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %><br/><br />
+
 	</div>
 
 	<div class="form-group">

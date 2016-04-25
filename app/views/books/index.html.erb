@@ -1,15 +1,14 @@
 
-
-</div><h1>List of Books <h1>
-    <div id="books-index">
-    <div class="row">
-        <div class="col-md-3 col-sm-3">
-            <h1>First Book</h1>
-            <%= image_tag('Ruby_on_Rails.svg.png')%>
-            <%= link_to 'Read more', book_path(1), class: 'btn btn-primary'%>
-
-        </div>
-
-    </div>
-
-  </div>
+<div id="books-index">
+	<% @books.each_slice(3) do |x| %>
+		<div class="row">
+			<% x.each do |x| %>
+				<div class="col-md-3 col-sm-3">
+				<h3><%= x.title %></h3>
+				<%= image_tag(x.coverpath) %>
+				<%= link_to 'Read More', book_path(x), class:'btn btn-primary' %>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
