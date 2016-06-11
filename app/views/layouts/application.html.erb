@@ -53,41 +53,33 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-<header>
-  <div class="container">
-    <h1> Bookstore<small><%= @page_title ? @page_title : 'Welcome' %></small></h1>
+  <header>
+    <div class="container">
+      <h1> Bookstore<small><%= @page_title ? @page_title : 'Welcome' %></small></h1>
     </div>
-</header>
-<section>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-8">
-
-      <% if flash[:notice] %>
-      <div class="alert alert-success"> <%= flash[:notice] %></div>
-       
-        <% end %>
-      <% if flash[:alert] %>
-      <div class="alert alert-danger"> <%= flash[:alert]%> </div>
-                 
-
+  </header>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <% if flash[:notice] %>
+          <div class="alert alert-success"> <%= flash[:notice] %></div>
           <% end %>
-  <%= yield %>
-  </div>
-      <div class="col-sm-4">
+          <% if flash[:alert] %>
+          <div class="alert alert-danger"> <%= flash[:alert]%> </div>
+          <% end %>
+          <%= yield %>
+        </div>
+        <div class="col-sm-4">
           <%= render 'partials/sidebar' %>
+        </div>
       </div>
-
-
-  </div>
-  </div>
-</section>
-<footer>
-  <div class="container">
-			<p>Copyright &copy; 2014, All Rights Reserved</p>
-		</div>
-</footer>
-
-</body>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2014, All Rights Reserved</p>
+    </div>
+  </footer>
+  </body>
 </html>
